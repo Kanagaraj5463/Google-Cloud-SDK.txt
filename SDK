@@ -1,3 +1,8 @@
+Google Cloud SDK (Software Development Kit), 
+It is a set of tools that are used to manage applications and resources that are hosted on the Google Cloud Platform. 
+It is composed of the gsutil, gcloud, and bqcommand line tools.
+
+
 GCLOUD commands 
 
 
