@@ -1,0 +1,92 @@
+GCLOUD commands 
+
+
+GCP Projects 
+gcloud projects describe: Display metadata for a project (including its ID).
+gcloud projects add-iam-policy-binding: Add an IAM policy binding to a specified project.
+
+
+GCP compute commands 
+gcloud compute instances delete vmname --zone=asia-south1-b
+gcloud compute instances list
+gcloud compute instance-templates list
+gcloud compute instances delete vmname 
+gcloud compute instances stop instance-name
+gcloud compute instances start instance-name
+gcloud compute zones list              List Compute Engine zones.
+gcloud compute instances describe      Display a VM instance's details.
+gcloud compute instances list          List all VM instances in a project.
+gcloud compute disks snapshot          Create snapshot of persistent disks.
+gcloud compute snapshots describe      Display a snapshot's details.
+gcloud compute snapshots delete        Delete a snapshot.
+gcloud compute ssh                      Connect to a VM instance by using SSH.
+
+
+
+GCP Storage commands 
+gsutil -m rsync -d -r /x/mysql/backups/db gs://appstoref
+gsutil cp file.txt gs://appstoref
+List all buckets and files	gsutil ls, gsutil ls -lh gs://<bucket-name>
+Create bucket	gsutil mb gs://<bucket-name>
+Download file	gsutil cp gs://<bucket-name>/<dir-path>/app.txt
+Upload file	gsutil cp <filename> gs://<bucket-name>/<directory>/
+Delete file	gsutil rm gs://<bucket-name>/<filepath>
+Move file	gsutil mv <src-filepath> gs://<bucket-name>/<directory>/<dest-filepath>
+Copy folder	gsutil cp -r ./conf gs://<bucket-name>/
+Show disk usage	gsutil du -h gs://<bucket-name/<directory>
+Make all files readable	gsutil -m acl set -R -a public-read gs://<bucket-name>/
+Create signed url with duration	gsutil signurl -d 1m
+
+
+GCP CI/CD Deployment manager commands 
+Create deployments	gcloud deployment-manager deployments create
+Update deployments	gcloud deployment-manager deployments update
+
+
+GCP IAM 
+    PURPOSE	                                COMMAND
+get project roles	                   gcloud projects get-iam-policy
+copy roles across org and projects	 gcloud iam roles copy
+get project roles	                   gcloud projects get-iam-policy
+copy roles across org and projects	 gcloud iam roles copy
+gcloud iam list-grantable-roles: List IAM grantable roles for a resource.
+gcloud iam roles create: Create a custom role for a project or org.
+gcloud iam service-accounts create: Create a service account for a project.
+gcloud iam service-accounts add-iam-policy-binding: Add an IAM policy binding to a service account.
+gcloud iam service-accounts set-iam-policy-binding: Replace existing IAM policy binding.
+gcloud iam service-accounts keys list: List a service account's keys.
+
+
+GCP Kuberentes engine
+    PURPOSE	                              COMMAND
+create cluster	                gcloud container clusters create cluster-name --num-nodes 1
+List all container clusters	    gcloud container clusters list
+Set kubectl context	            gcloud container clusters get-credentials <cluster-name>
+Set default cluster	            gcloud config set container/cluster cluster-name
+resize existing cluster	        gcloud container clusters resize --num-nodes
+gcloud auth configure-docker                   Register the gcloud tool as a Docker credential helper.
+gcloud container clusters create               Create a cluster to run GKE containers.
+gcloud container clusters list                 List clusters for running GKE containers.
+gcloud container clusters get-credentials      Update kubeconfig to get kubectl to use a GKE cluster.
+gcloud container images list-tags              List tag and digest metadata for a container image.
+
+
+GCP components 
+     PURPOSE	                          COMMAND
+List down the components.     gcloud components list
+Update the components	      gcloud components update
+Install the components	      gcloud components install <component-name>
+
+
+GCP VPC
+
+    PURPOSE	                              COMMAND
+List all networks	            gcloud compute networks list
+Detail of one network	        gcloud compute networks describe <network-name> --format json
+Create network	                gcloud compute networks create <network-name>
+Create subnet	                gcloud compute networks subnets create subnet1 --network subnet-1 --range 10.0.0.0/24
+List all firewall rules	        gcloud compute firewall-rules list
+List all forwarding rules	    gcloud compute forwarding-rules list
+Describe one firewall rule	    gcloud compute firewall-rules describe <rule-name>
+Create firewall rule	        gcloud compute firewall-rules create my-rule --network default --allow tcp:22
+Update firewall rule	        gcloud compute firewall-rules update default --network default --allow tcp:80
