@@ -33,6 +33,9 @@ gcloud compute ssh                      Connect to a VM instance by using SSH.
 
 
 GCP Storage commands 
+
+gsutil - g= google, S=storge, util=utility 
+
 gsutil -m rsync -d -r /x/mysql/backups/db gs://appstoref
 gsutil cp file.txt gs://appstoref
 List all buckets and files	gsutil ls, gsutil ls -lh gs://<bucket-name>
