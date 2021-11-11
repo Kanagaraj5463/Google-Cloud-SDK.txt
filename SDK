@@ -99,3 +99,7 @@ List all forwarding rules	    gcloud compute forwarding-rules list
 Describe one firewall rule	    gcloud compute firewall-rules describe <rule-name>
 Create firewall rule	        gcloud compute firewall-rules create my-rule --network default --allow tcp:22
 Update firewall rule	        gcloud compute firewall-rules update default --network default --allow tcp:80
+
+
+help 
+https://gist.github.com/ryderdamen/926518ddddd46dd4c8c2e4ef5167243d
