@@ -5,6 +5,10 @@ It is composed of the gsutil, gcloud, and bqcommand line tools.
 
 GCLOUD commands 
 
+GCP Auth 
+gcloud auth revoke
+gcloud auth login
+gcloud beta auth application-default login
 
 GCP Projects 
 gcloud projects describe: Display metadata for a project (including its ID).
