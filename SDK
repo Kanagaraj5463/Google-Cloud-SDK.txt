@@ -15,7 +15,7 @@ gcloud projects describe: Display metadata for a project (including its ID).
 gcloud projects add-iam-policy-binding: Add an IAM policy binding to a specified project.
 
 
-GCP compute commands 
+GCP compute commands Gokuleeeeeeeeee 
 gcloud compute instances delete vmname --zone=asia-south1-b
 gcloud compute instances list
 gcloud compute instance-templates list
